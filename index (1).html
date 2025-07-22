@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Danae 💌</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom right, #ffe6ec, #fff3f8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .card {
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 600px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            display: none;
+            animation: fadeIn 2s ease forwards;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        button {
+            background-color: #ff5e91;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff3b78;
+        }
+        img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid #fff0f5;
+        }
+        footer {
+            margin-top: 2rem;
+            font-weight: bold;
+            color: #ff3b78;
+        }
+    </style>
+</head>
+<body>
+    <audio id="audio" src="MILO J - M.A.I (Video Oficial)(M4A_128K).mp3"></audio>
+    <button onclick="mostrarCarta()">💖 Escucha y leé lo que siento por vos</button>
+    <div class="card" id="carta">
+        <img src="danae.jpg" alt="Danae" />
+        <h2>🌹 Para Danae 🌹</h2>
+        <p>
+            A veces me cuesta poner en palabras lo que siento por vos… porque lo que siento, simplemente, no entra en frases.
+            Desde que llegaste, todo cambió. Sos como esa canción que no me canso de escuchar, como ese atardecer que quiero volver a ver una y otra vez.
+            No sos perfecta, y qué suerte… porque yo no busco eso. Busco a alguien real, como vos. Con tu risa rara, tus enojos espontáneos, y esos días tuyos que iluminan los míos.
+            Y si la vida me da a elegir, te elijo a vos. Mil veces. Con los ojos cerrados y el corazón abierto. Porque sos vos, Danae. Mi canción favorita. Mi “Mai”.
+        </p>
+        <footer>Hecho con cariño de Johan, que te quiere mucho, mucho, muchíííííííísimo 💞</footer>
+    </div>
+    <script>
+        function mostrarCarta() {
+            document.getElementById('carta').style.display = 'block';
+            document.querySelector('button').style.display = 'none';
+            document.getElementById('audio').play();
+        }
+    </script>
+</body>
+</html>
